@@ -16,7 +16,7 @@ git remote remove origin取消远程仓库连接
 ssh -T git@github.com查看当前主机ssh连接情况
 ssh-add -D 清空ssh
 （ssh-agent bash启动连接）
-ssh-add ~/.ssh/id_rsa 添加ssh
+ssh-add ~/.ssh/id_rsa .pub添加ssh
 
 git clone git@github.com:yisanyishi/远程仓库名 克隆一个本地库
 
