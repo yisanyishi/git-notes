@@ -1,1 +1,21 @@
+gitHub 仓库，提供Git仓库的托管服务，本质上是Git远程仓库。
+Git仓库和GitHub仓库之间传输通过SSH加密
+1.没有.ssh文件，需要创建SSH Key密钥ssh-keygen -t rsa -C'3145736747@qq.com'
+2.可以在电脑上找到.ssh 文件，里面有id_rsa私钥 id_rsa.pub公钥
+3.登录gitHub打开SSH Keys页面 ，填上任一title，在key文本框粘贴电脑上id_rsa.pub的内容
+4.这样GitHub就可以识别你的推送。只要把每台电脑key添加到GitHub就可以往GitHub上推送
+
+在github上创建一个git仓库
+本地目录git init ，git add . , git commit -m'first push'(远程连接的是本地git仓库不是目录文件)
+git remote add origin git@github.com:yisanyishi/远程仓库名 本地连接github
+git push -u origin master  把当前分支推送到远程
+git push origin master 把本地master分支最新修改推送给GitHub
+
+
+git remote remove origin取消远程仓库连接
+ssh -T git@github.com查看当前主机ssh连接情况
+ssh-add -D 清空ssh
+（ssh-agent bash启动连接）
+ssh-add ~/.ssh/id_rsa 添加ssh
+
 
