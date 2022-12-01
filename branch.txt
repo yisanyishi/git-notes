@@ -1,0 +1,19 @@
+git chechout -b 分支名 a 创建（有b就是多了一不创建）分支a并切换到分支a   注意撤销命令git chechout 文件名
+git switch -c 分支名a  创建切换分支a
+
+git branch 查看当前分支
+git merge 分支名a   合并指定分支a到当前分支名
+git branch -d 分支名a  合并以后可以删除分支a
+
+
+当合并分支时修改的内容冲突时  git status查看冲突文件  修改后再提交保存
+
+因为Fast forward模式删除丢失会分支信息。我们可以用git merge --no-ff m'描述' 文件名
+
+git stash把当前分支储存等到后面继续用
+git chechout 分支a 切换分支a  git checkout -b 分支c 创建切换到分支c   修复完成保存提交切换到分支a然后合并删除分支c
+然后切换到存储的分支 git stash pop 恢复同时删除stash内容
+git stash list可以查看储存的分支
+git cherry-pick  commit的id  用于复制一个特定的提交到当前分支
+
+开发新功能一般新建分支合并后删除。不扰乱主分支
